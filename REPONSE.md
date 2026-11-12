@@ -6,16 +6,6 @@
 **Outil de modélisation :** PlantUML  
 **Pièces jointes :** `diagramme_uml.pdf`, `main.cpp`
 
----
-
-## Introduction
-
-Dans une université béninoise, les étudiants organisent régulièrement des séances de travaux dirigés en mathématiques, en physique et en informatique. L'objectif de cet exercice est de concevoir, puis d'implémenter en C++, une version simplifiée d'une application console permettant de gérer les étudiants, les matières, les séances de TD et les inscriptions des étudiants à ces séances.
-
-Ce rapport suit le plan de l'énoncé. La partie A présente la modélisation UML. La partie B décrit l'implémentation en C++. La partie C expose les tests réalisés et leurs résultats. Enfin, une réponse argumentée est apportée à la question de réflexion.
-
----
-
 ## Partie A : Modélisation UML
 
 ### 1. Identification des classes
@@ -238,9 +228,3 @@ Troisièmement, les inscriptions se rapportent à une séance précise et non à
 Quatrièmement, cette organisation évite la redondance : le code et l'intitulé d'une matière sont stockés une seule fois, et toutes les séances y font référence. Une correction apportée à la matière se répercute ainsi partout.
 
 Enfin, elle facilite l'évolution du programme. L'ajout d'un enseignant, d'un type de séance ou d'un statut (annulée, reportée) ne nécessite de modifier que `SeanceTD`, la classe `Matiere` restant simple et stable.
-
----
-
-## Conclusion
-
-Cet exercice a permis de modéliser puis d'implémenter une application de gestion des TD universitaires. La modélisation UML a fait apparaître quatre classes reliées par des associations dont les cardinalités traduisent les règles du domaine. L'implémentation en C++ respecte les contraintes d'encapsulation, d'usage des constructeurs et de gestion des collections par `vector`, et empêche effectivement la double inscription d'un étudiant à une même séance. Les tests réalisés confirment le bon fonctionnement des différentes fonctionnalités ainsi que le traitement correct des cas d'erreur.
